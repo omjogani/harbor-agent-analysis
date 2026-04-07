@@ -44,7 +44,7 @@ def process_file(path: Path, env_path: list[str]) -> bool:
 
 
 def main():
-    jobs_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("jobs")
+    jobs_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("../jobs")
     if not jobs_dir.is_dir():
         print(f"Error: {jobs_dir} is not a directory", file=sys.stderr)
         sys.exit(1)
