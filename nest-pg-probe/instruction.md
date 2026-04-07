@@ -24,8 +24,6 @@ Expose port 8080
 Depend on the postgres service
 Pass DB connection env vars so NestJS can connect to Postgres over the Docker network
 
-
-
 3. NestJS App — /checkdb endpoint
 
 Scaffold a minimal NestJS app (or provide the relevant controller + service code)

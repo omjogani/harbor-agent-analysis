@@ -3,3 +3,6 @@ FROM ubuntu:24.04
 WORKDIR /app
 
 RUN apt update -y && apt install -y curl socat iproute2
+
+# Create docker group and add root to it
+RUN groupadd -f docker && usermod -aG docker root
