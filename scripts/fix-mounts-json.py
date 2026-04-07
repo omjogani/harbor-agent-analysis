@@ -57,9 +57,9 @@ def main():
             print(f"  Fixed {config_path.relative_to(jobs_dir)}")
             fixed += 1
 
-    # Fix result.json files
+    # Fix result.json files (trial results have mounts at config.environment)
     for result_path in sorted(jobs_dir.glob("**/result.json")):
-        if process_file(result_path, ["environment"]):
+        if process_file(result_path, ["config", "environment"]):
             print(f"  Fixed {result_path.relative_to(jobs_dir)}")
             fixed += 1
 
